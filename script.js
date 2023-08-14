@@ -28,3 +28,10 @@ const updateScore = winner => {
     computerScore++;
   }
 };
+
+//Updates round number after each round played
+const advanceRound = () => {
+  if(humanScore++ || computerScore++){
+    currentRoundNumber++;
+  }
+}
