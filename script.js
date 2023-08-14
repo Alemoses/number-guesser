@@ -8,3 +8,14 @@ let currentRoundNumber = 1;
 const generateTarget = () => {
   return Math.floor(Math.random() * 10);
 }
+
+//This function is called each round to determine which guess is closest to target number
+const compareGuesses = (userInput, compInput, target) => {
+  if(Math.abs(userInput - target) < Math.abs(compInput - target)){
+    return true;
+  }else if(Math.abs(userInput - target) > Math.abs(compInput - target)){
+    return false;
+  }else{
+    return true;
+  }
+};
