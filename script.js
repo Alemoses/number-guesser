@@ -19,3 +19,12 @@ const compareGuesses = (userInput, compInput, target) => {
     return true;
   }
 };
+
+//This function is used to correctly increase the winner's score after each round
+const updateScore = winner => {
+  if(winner === 'human'){
+    humanScore ++;
+  }else if(winner === 'computer'){
+    computerScore++;
+  }
+};
